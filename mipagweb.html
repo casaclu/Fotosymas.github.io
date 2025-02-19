@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hacking Ético</title>
+  <style>
+    /* Estilos CSS existentes */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #666666;
+      text-align: justify;
+      margin: 20px;
+    }
+
+    h2 {
+      color: #333333;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .image-small {
+      display: block;
+      margin: 0 auto;
+      max-width: 200px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+      margin: 20px;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    /* Agregar estilos para el formulario de contacto */
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Agregar estilos para el carrusel de imágenes */
+    .carousel-container {
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Agregar estilos para el menú de navegación desplegable */
+    .dropdown-menu {
+      display: none;
+    }
+
+    .dropdown-menu.active {
+      display: block;
+    }
+
+    /* Agregar estilos para las animaciones */
+    .fade-in {
+      opacity: 0;
+      animation: fadeInAnimation 1s forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      // Obtener el botón
+      const button = document.querySelector('.button');
+
+      // Cambiar el color de fondo del botón al hacer clic
+      button.addEventListener('click', () => {
+        button.style.backgroundColor = '#f44336';
+      });
+
+      // Mostrar un mensaje al pasar el cursor sobre la imagen
+      const image = document.querySelector('.image-small');
+      image.addEventListener('mouseover', () => {
+        alert('¡Bienvenido al mundo del Hacking Ético!');
+      });
+
+      // Mostrar y ocultar el menú desplegable al hacer clic en el enlace correspondiente
+      const dropdownLinks = document.querySelectorAll('.dropdown-link');
+      dropdownLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const dropdownMenu = link.nextElementSibling;
+          dropdownMenu.classList.toggle('active');
+        });
+      });
+
+      // Aplicar animación de desvanecimiento a los elementos con la clase 'fade-in'
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach((element) => {
+        element.style.animationPlayState = 'paused';
+      });
+
+      window.addEventListener('scroll', () => {
+        fadeElements.forEach((element) => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          if (elementPosition < windowHeight) {
+            element.style.animationPlayState = 'running';
+          }
+        });
+      });
+
+      // Desplazamiento suave al hacer clic en los enlaces internos
+      const internalLinks = document.querySelectorAll('a[href^="#"]');
+      internalLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const targetId = link.getAttribute('href').slice(1);
+          const targetElement = document.getElementById(targetId);
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>Aprende Hacking Ético - Gratis</h1>
+  <p>Hola, hoy te voy a enseñar algunas páginas web e información relacionadas con el hacking ético, así que presta mucha atención.</p>
+
+  <h2>TryHackMe</h2>
+  <img class="image-small" src="https://tryhackme-images.s3.amazonaws.com/user-avatars/b1ea7326daabfd14fafbd250c3a9b690.png" alt="TryHackMe Logo">
+  <p>
+    TryHackMe es una plataforma donde puedes aprender mucho sobre<b> hacking</b> ético y ciberseguridad. Allí puedes aprender desde blue team, red team, green team y redes.<br></br>Es una plataforma muy actualizada en cuanto al hacking ético, aprendes realizando retos,
+    la plataforma es gratis pero si quieres aprender aún más pagás un precio justo, te invito a que la pruebes solo tienes que entrar al siguiente botón adjunto.
+  </p>
+  <a href="https://www.tryhackme.com" class="button">Ir al sitio web</a><br></br>
+
+  <h2>Hack The Box</h2>
+  <img class="image-small" src="https://i.ytimg.com/vi/o42dgCOBkRk/hqdefault.jpg" alt="Hack The Box Logo">
+  <p>Hack The Box una plataforma muy interesante,para mi en lo personal,la recomiendo mucho aun más que tryhackme pues aún que las dos son muy buenas para aprender hacking ético y ciberseguridad,lo especial de hack the box tiene retos, certificados y una gran comunidad donde puedes aprender al por mayor estas profesiones tan importantes.<br></br>
+    Te animo a que la visites pues no te arrepentirás.Te dejo el botonen la parte de abajo para que vayas a esta página tan especial.
+  </p>
+  <a href="https://www.hackthebox.com" class="button">Ir al sitio web</a><br></br>
+
+  <!-- Agregar formulario de contacto -->
+  <div class="form-container fade-in">
+    <h2>Contáctanos</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="button">Enviar Mensaje</button>
+    </form>
+  </div>
+
+  <!-- Agregar carrusel de imágenes -->
+  <div class="carousel-container fade-in">
+    <div class="carousel-slide">
+      <img src="https://www.google.com/search?client=ms-android-motorola-rvo3&sxsrf=AB5stBiudZnVenK5dJm565b2p2xeKKrCiQ:1688611343066&q=hacking&tbm=isch&sa=X&ved=2ahUKEwiP-5C6h_n_AhVJmWoFHWngBOwQ0pQJegQIHhAB&biw=485&bih=922&dpr=1.49#imgrc=K4zFDwCrOi_VBM" alt="Imagen 1">
+      <img src="https://example.com/image2.jpg" alt="Imagen 2">
+      <img src="https://example.com/image3.jpg" alt="Imagen 3">
+    </div>
+  </div>
+
+  <!-- Agregar menú de navegación desplegable -->
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li>
+        <a href="#" class="dropdown-link">Cursos</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Curso 1</a></li>
+          <li><a href="#">Curso 2</a></li>
+          <li><a href="#">Curso 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Código JavaScript adicional aquí
+  </script>
+</body>
+</html>
